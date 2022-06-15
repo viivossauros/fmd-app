@@ -1,0 +1,7 @@
+{
+  "name": "fmd-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
