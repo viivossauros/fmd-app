@@ -1,0 +1,19 @@
+$theme-colors:
+    'primary',
+    'secondary',
+    'tertiary',
+    'medium',
+    'light',
+    'dark'
+;
+
+.border {
+  border-width: 1px;
+  border-style: solid;
+}
+
+@each $key in $theme-colors {
+  .border-#{$key} {
+    border-color: var(--ion-color-#{$key});
+  }
+}

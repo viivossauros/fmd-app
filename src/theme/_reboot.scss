@@ -1,0 +1,23 @@
+ion-header::after {
+  // To remove box-shadow
+  display: none;
+}
+
+ion-avatar {
+  --border-radius: 1rem;
+
+  width: $avatar-size;
+  height: $avatar-size;
+
+  &.size {
+    &-sm {
+      width: $avatar-size-sm;
+      height: $avatar-size-sm;
+    }
+
+    &-lg {
+      width: $avatar-size-lg;
+      height: $avatar-size-lg;
+    }
+  }
+}

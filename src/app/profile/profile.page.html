@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button routerLink="/">
+      <ion-icon name="ic-arrow"
+                color="tertiary"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="rounded-content">
+  <section class="ion-margin-bottom ion-padding-bottom">
+    <ion-grid class="ion-margin-bottom">
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="auto">
+          <ion-avatar class="size-lg border border-light">
+            <img src="assets/avatares/ic-avatar.svg"
+                 alt="Dinossauro">
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-title class="ion-text-center">
+      Alterar perfil
+    </ion-title>
+  </section>
+  <form [formGroup]="profileFormGroup">
+    <ion-item class="ion-margin-bottom">
+      <ion-label position="floating"
+                 color="light">
+        Nome
+      </ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin-bottom">
+      <ion-label position="floating"
+                 color="light">
+        E-mail
+      </ion-label>
+      <ion-input type="email"
+                 autocomplete="off"
+                 formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin-bottom">
+      <ion-label position="floating"
+                 color="light">
+        Senha
+      </ion-label>
+      <ion-input type="password"
+                 formControlName="password"></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin-bottom">
+      <ion-label position="floating"
+                 color="light">
+        Confirme a senha
+      </ion-label>
+      <ion-input type="password"
+                 formControlName="passwordConfirm"></ion-input>
+    </ion-item>
+    <ion-button color="tertiary"
+                expand="block">
+      Alterar
+    </ion-button>
+  </form>
+</ion-content>

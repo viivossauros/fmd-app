@@ -1,0 +1,12 @@
+ion-content {
+  --padding-top: 2.75rem;
+  --padding-start: 1rem;
+  --padding-end: 1rem;
+
+  &.rounded-content {
+    &::part(background) {
+      background: var(--ion-color-medium);
+      border-radius: $border-radius-lg $border-radius-lg 0 0;
+    }
+  }
+}
