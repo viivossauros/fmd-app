@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Vivian Nadoti",
+      "email": "viviannadoti@gmail.com",
+      "avatar": {
+        "id": "1",
+        "name": "T-Rex"
+      },
+      "password": "teste123"
+    },
+    {
+      "id": 2,
+      "name": "Camila Paiva",
+      "email": "camilapaiva@gmail.com",
+      "avatar": {
+        "id": "1",
+        "name": "T-Rex"
+      },
+      "password": "teste321"
+    }
+  ]
+}
