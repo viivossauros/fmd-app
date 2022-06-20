@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { UserService } from './shared/services/user.service';
 
@@ -7,7 +7,7 @@ import { UserService } from './shared/services/user.service';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit, OnDestroy {
   subscription: Subscription;
 
   constructor(
@@ -16,5 +16,9 @@ export class AppComponent implements OnInit{
 
   ngOnInit() {
     this.subscription = this.userService.getUser$.subscribe();
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }
