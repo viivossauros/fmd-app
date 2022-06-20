@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { UserService } from '../shared/services/user.service';
 
 
 @NgModule({
@@ -13,6 +14,9 @@ import { HomePageRoutingModule } from './home-routing.module';
     FormsModule,
     IonicModule,
     HomePageRoutingModule
+  ],
+  providers: [
+      UserService
   ],
   declarations: [HomePage]
 })

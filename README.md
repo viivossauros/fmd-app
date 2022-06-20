@@ -1,7 +1,10 @@
 ## E aí, tranquilo?!
 
 > ⚠️ Esse README possui uma comunicação passivo-agressiva a fim de 
-> chamar sua atenção para lê-lo até o fim. Não escrevemos isso aqui a toa, né?!
+> chamar sua atenção para lê-lo até o fim. Não escrevemos isso aqui a toa, 
+> né?! Apois leia.
+
+<br>
 
 Para os afobadinhos, CALMA! Antes de rodar nosso projeto, é importante que você
 verifique se atende aos requisitos:

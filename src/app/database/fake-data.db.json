@@ -1,24 +1,12 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "name": "Vivian Nadoti",
-      "email": "viviannadoti@gmail.com",
-      "avatar": {
-        "id": "1",
-        "name": "T-Rex"
-      },
-      "password": "teste123"
+  "users": {
+    "id": 1,
+    "name": "Vivian Nadoti",
+    "email": "viviannadoti@gmail.com",
+    "avatar": {
+      "id": "1",
+      "name": "T-Rex"
     },
-    {
-      "id": 2,
-      "name": "Camila Paiva",
-      "email": "camilapaiva@gmail.com",
-      "avatar": {
-        "id": "1",
-        "name": "T-Rex"
-      },
-      "password": "teste321"
-    }
-  ]
+    "password": "teste123"
+  }
 }

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validator, Validators } from '@angular/forms';
+import { Store } from '../shared/user.store';
+import { Observable } from 'rxjs';
+import { User } from '../shared/models/user';
 
 @Component({
   selector: 'app-profile',
@@ -8,22 +11,32 @@ import { FormBuilder, FormGroup, Validator, Validators } from '@angular/forms';
 })
 export class ProfilePage implements OnInit {
 
+  user: User;
   profileFormGroup: FormGroup;
 
   constructor(
       private formBuilder: FormBuilder,
+      private userStore: Store
   ) { }
 
   ngOnInit() {
-    this.createProfileForm();
+
+    this.userStore.getUser().subscribe(
+        user => {
+          this.createProfileForm(user);
+        },
+        error => {
+          console.log(error);
+        }
+    );
   }
 
-  createProfileForm(): void {
+  createProfileForm(user: User): void {
     this.profileFormGroup = this.formBuilder.group({
-      name: ['', [Validators.required]],
-      email: ['', [Validators.email, Validators.required]],
-      password: [],
-      passwordConfirm: []
+      name: [user.name, [Validators.required]],
+      email: [user.email, [Validators.email, Validators.required]],
+      password: [user.password],
+      passwordConfirm: ['']
     });
   }
 }
